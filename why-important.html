@@ -3,57 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Road Safety Is Important</title>
+    <title>Why Road Safety Is Important?</title>
     <style>
+        /* Body and General Page Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f8;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #fbb034, #ffdd00);
             color: #333;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
+        header {
+            background: linear-gradient(120deg, #2b8de8, #28b5b5);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1000px;
             background: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #2b8de8;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        h1 {
-            color: #fbb034;
+        /* Content Styling */
+        .content {
+            margin-bottom: 40px;
         }
 
-        p {
+        .content p {
             font-size: 1.1em;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
-        .nav-links {
-            margin-top: 20px;
+        /* Tip Box Styling */
+        .tip {
+            background: #f1f1f1;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #fbb034;
-            font-weight: bold;
-            margin: 0 10px;
+        .tip:hover {
+            background: #d1e7e0;
+            transform: scale(1.03);
         }
+
+        /* Images Styling */
+        .image {
+        max-width: 100%;
+        max-height: 300px; /* Adjust this value to the desired height */
+        height: auto;
+        border-radius: 8px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Footer Styling */
+        footer {
+            background: #2b8de8;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            background: #28b5b5;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #1d9b9b;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Why Road Safety Is Important</h1>
-        <p>Road safety is critical to saving lives and minimizing the number of injuries caused by road accidents. Adopting safe driving practices and being mindful of traffic regulations protect everyone on the road.</p>
-        
-        <div class="nav-links">
-            <a href="traffic-rules.html">Traffic Rules and Signals</a> |
-            <a href="importance-road-safety.html">Importance of Road Safety</a>
+    <header>
+        <h1>Why Road Safety Is Important?</h1>
+        <p>Driving Safe, Living Safe</p>
+    </header>
+
+    <section>
+        <div class="content">
+            <h2>1. What Happens If You Don't Follow Road Safety?</h2>
+            <p>When road safety rules are ignored, the consequences can be dire. Speeding, distracted driving, or not wearing a seatbelt are among the leading causes of accidents. These actions endanger not only your life but also the lives of others on the road.</p>
+            <img src="road-accident.jpg" alt="Car crash scene" class="image">
         </div>
-    </div>
+
+        <div class="content">
+            <h2>2. How to Behave on the Road?</h2>
+            <p>Road safety requires attention and respect for others. Always signal before changing lanes, avoid distractions like texting, and keep a safe distance from other vehicles. Remember, your good behavior on the road can save lives.</p>
+            <img src="safe-driving.webp" alt="Safe driving behavior" class="image">
+        </div>
+
+        <div class="content">
+            <h2>3. Simple Tips for Road Safety</h2>   
+            <div class="tip">
+                <h3>Tip 1: Always Wear a Seatbelt</h3>
+                <p>Wearing a seatbelt reduces the chances of serious injury during an accident. Always make it a habit, no matter how short the trip.</p>
+                <img src="Seatbelt.jpg" alt="Seatbelt" class="image">
+            </div>
+            <div class="tip">
+                <h3>Tip 2: Avoid Distractions</h3>
+                <p>Stay focused on the road. Avoid texting, talking on the phone, or using in-car technology while driving. Pull over safely if you need to make a call.</p>
+                <img src="Distractions.jpg" alt="Distractions" class="image">
+            </div>
+            <div class="tip">
+                <h3>Tip 3: Follow Speed Limits</h3>
+                <p>Speed limits are designed for your safety. Driving too fast reduces your ability to react to sudden changes in the road or weather conditions.</p>
+                <img src="Speed.webp" alt="Speed" class="image">
+            </div>
+        </div>
+
+        <div class="content" style="text-align:center;">
+            <a href="#" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Road Safety Awareness. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
