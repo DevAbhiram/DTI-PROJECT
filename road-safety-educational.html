@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety Educational</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #444;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .block {
+            display: inline-block;
+            width: 45%;
+            padding: 20px;
+            margin: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .block:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .block h2 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #555;
+        }
+
+        .block p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Specific block colors */
+        #why-important { background: linear-gradient(135deg, #fbb034, #ffdd00); color: #fff; }
+        #traffic-rules { background: linear-gradient(135deg, #32cd32, #fada5e); color: #fff; }
+        #importance-road-safety { background: linear-gradient(135deg, #1e90ff, #48d1cc); color: #fff; }
+        #guidelines-driving { background: linear-gradient(135deg, #f0f8ff, #00bfff); color: #333; }
+        #after-accident { background: linear-gradient(135deg, #ff6347, #808080); color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Road Safety Educational</h1>
+        <div class="block" id="why-important" onclick="location.href='why-important.html'">
+            <h2>Why Road Safety Is Important?</h2>
+            <p>Learn why road safety is crucial for everyone and how it helps prevent accidents and save lives.</p>
+        </div>
+
+        <div class="block" id="traffic-rules" onclick="location.href='traffic-rules.html'">
+            <h2>Traffic Rules and Signals</h2>
+            <p>Understand the basic traffic rules and signals to make roads safer for all users.</p>
+        </div>
+
+        <div class="block" id="importance-road-safety" onclick="location.href='importance-road-safety.html'">
+            <h2>Importance of Road Safety</h2>
+            <p>Discover the importance of road safety and its impact on reducing injuries and fatalities.</p>
+        </div>
+
+        <div class="block" id="guidelines-driving" onclick="location.href='guidelines-driving.html'">
+            <h2>Essential Guidelines for Safe Driving</h2>
+            <p>Explore essential guidelines for safe driving, including best practices to follow on the road.</p>
+        </div>
+
+        <div class="block" id="after-accident" onclick="location.href='after-accident.html'">
+            <h2>Steps to Take After a Road Accident</h2>
+            <p>Know the steps to take after an accident to ensure safety and proper documentation.</p>
+        </div>
+    </div>
+
+</body>
+</html>
