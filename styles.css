@@ -1,117 +1,171 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body & Global Styles */
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-h1, h2 {
-    color: #d32f2f; /* Red for emphasis */
-}
-
-/* Header & Navigation Bar */
+/* Header & Navigation Styles */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav .logo h1 {
-    font-size: 2rem;
-    margin-left: 20px;
+    font-size: 1.8em;
 }
 
 nav .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
+    gap: 20px;
 }
 
-nav .nav-links li {
-    margin: 0 15px;
-}
-
-nav .nav-links a {
+nav .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
-nav .nav-links a:hover {
-    color: #ffeb3b; /* Yellow on hover */
+nav .nav-links li a:hover {
+    color: #ff4c4c;
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background-color: #ff4c4c;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 0;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero-text h2 {
+    font-size: 2.5em;
+    animation: typing 4s steps(40) 1s forwards;
+    color: #ff4c4c;
 }
 
-.hero p {
-    font-size: 1.5rem;
+.hero-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.hero-text a.cta-btn {
+    background-color: #ff4c4c;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.hero-text a.cta-btn:hover {
+    background-color: #ff6f6f;
+}
+
+/* Keyframe for Typing Animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+        color: lightcoral;
+    }
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-.cta-btn {
-    background-color: #d32f2f;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-.cta-btn:hover {
-    background-color: #ffeb3b;
-}
-
-/* Section Styles */
-section {
+/* Education, Quiz, and Statistics Section Layout */
+.education, .quiz, .statistics {
+    text-align: center;
     padding: 40px 20px;
-    margin: 20px 0;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
-section h2 {
-    font-size: 2rem;
+.education h2, .quiz h2, .statistics h2 {
+    font-size: 2em;
     margin-bottom: 15px;
 }
 
-section p {
-    font-size: 1.2rem;
+.education p, .quiz p, .statistics p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style: disc;
-    margin-left: 40px;
+/* Three Boxes in a Row */
+.education, .quiz, .statistics {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-/* Footer */
+.education .cta-btn, .quiz .cta-btn, .statistics .cta-btn {
+    background-color: #ff4c4c;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.education .cta-btn:hover, .quiz .cta-btn:hover, .statistics .cta-btn:hover {
+    background-color: #ff6f6f;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 5px 0;
 }
 
 footer a {
-    color: #ffeb3b;
+    color: #ff4c4c;
+    text-decoration: none;
 }
 
 footer a:hover {
-    color: #d32f2f;
+    text-decoration: underline;
 }
