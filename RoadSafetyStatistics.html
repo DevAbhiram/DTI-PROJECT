@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety Statistics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .statistics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .stat-box {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+        }
+        .stat-box h3 {
+            color: #007bff;
+        }
+        .graph-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .graph {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain; /* Ensures the image maintains its aspect ratio */
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Road Safety Statistics: Understanding the Impact of Traffic Accidents</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Global Road Safety Overview</h2>
+            <p>Traffic accidents are one of the leading causes of death globally. In 2023, approximately 1.19 million people died due to road traffic incidents, with a significant percentage of those fatalities involving pedestrians, cyclists, and motorcyclists. Road safety remains a crucial focus for governments and organizations worldwide, aiming to reduce fatalities and injuries.</p>
+        </section>
+
+        <section>
+            <h2>Key Road Safety Statistics</h2>
+            <div class="statistics">
+                <div class="stat-box">
+                    <h3>Global Traffic Fatalities</h3>
+                    <p>In 2023, the total number of global traffic fatalities was approximately 1.19 million people, with pedestrian, cyclist, and motorcyclist fatalities being a significant proportion of the total number of deaths.</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Fatalities in the U.S. (2020)</h3>
+                    <p>In the U.S., there were 38,824 traffic-related fatalities in 2020, marking the highest number since 2007. Fatalities increased by 6.8% compared to the previous year.</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Young Adult Fatalities</h3>
+                    <p>The age group of 5-29 years old accounts for a significant portion of global road traffic deaths, underscoring the importance of educating young drivers on road safety.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Graphs and Visual Representation</h2>
+            <div class="graph-container">
+                <h3>Fatalities by Region (2023)</h3>
+                <img class="graph" src="graph.jpeg" alt="Road Traffic Deaths by Region">
+            </div>
+            <div class="graph-container">
+                <h3>Fatalities by Road User Type</h3>
+                <img class="graph" src="graph1.jpeg" alt="Road Traffic Fatalities by User Type">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contributing Factors to Traffic Accidents</h2>
+            <ul>
+                <li><strong>Speeding:</strong> A major contributor to road fatalities. Driving above speed limits reduces reaction time and increases the severity of crashes.</li>
+                <li><strong>Alcohol Impairment:</strong> Alcohol consumption is a leading cause of accidents, especially during the nighttime and on weekends.</li>
+                <li><strong>Seatbelt Usage:</strong> Failure to wear seatbelts is a significant factor in traffic fatalities, especially in high-speed crashes.</li>
+                <li><strong>Motorcycle Accidents:</strong> Motorcyclists are particularly vulnerable on the road, with accidents often resulting in severe injury or death.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What Can Be Done to Improve Road Safety?</h2>
+            <p>There are proven measures that can reduce the number of road accidents, such as:</p>
+            <ul>
+                <li>Implementing safer road designs</li>
+                <li>Improving vehicle safety technologies</li>
+                <li>Enforcing stricter traffic laws</li>
+                <li>Promoting public awareness about road safety</li>
+                <li>Investing in infrastructure to protect vulnerable road users (pedestrians, cyclists, etc.)</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Sources: WHO Global Status Report on Road Safety 2023, National Highway Traffic Safety Administration (NHTSA), U.S. Department of Transportation</p>
+    </footer>
+</body>
+</html>
