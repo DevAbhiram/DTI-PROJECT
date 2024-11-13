@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Rules Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .quiz-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .options li:hover {
+            background-color: #ddd;
+        }
+
+        .options li.correct {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .options li.incorrect {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Traffic Rules Quiz</h1>
+        <div id="quiz">
+            <div class="question" id="question"></div>
+            <ul class="options" id="options">
+                <!-- Options will be dynamically inserted here -->
+            </ul>
+        </div>
+        <div id="result" class="result hidden">
+            Your Score: <span id="score"></span>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the first thing you should do when approaching a red traffic light?",
+                options: ["A) Speed up to cross before it turns red", "B) Stop and wait for the green light", "C) Drive through it cautiously", "D) Honk your horn"],
+                answer: "B"
+            },
+            {
+                question: "What should you do if you see a pedestrian crossing the road at a crosswalk?",
+                options: ["A) Speed up to avoid delay", "B) Stop and let the pedestrian cross safely", "C) Ignore the pedestrian and keep driving", "D) Slow down and continue driving"],
+                answer: "B"
+            },
+            {
+                question: "What is the minimum age for driving a car in most countries?",
+                options: ["A) 16", "B) 18", "C) 21", "D) 25"],
+                answer: "B"
+            },
+            {
+                question: "What is the proper hand signal for a left turn?",
+                options: ["A) Left arm straight out", "B) Right arm straight out", "C) Left arm bent up", "D) Left arm bent down"],
+                answer: "A"
+            },
+            {
+                question: "When should you wear a seatbelt?",
+                options: ["A) Only when driving on highways", "B) Only when driving in the city", "C) Always, regardless of where you're driving", "D) Only when the police are around"],
+                answer: "C"
+            },
+            {
+                question: "What does a yellow (amber) traffic light mean?",
+                options: ["A) Slow down and prepare to stop", "B) Speed up to clear the intersection", "C) Turn left or right immediately", "D) Proceed without stopping"],
+                answer: "A"
+            },
+            {
+                question: "How far ahead should you signal before making a turn?",
+                options: ["A) 10-20 meters", "B) 100-200 meters", "C) 50-75 meters", "D) 500 meters"],
+                answer: "C"
+            },
+            {
+                question: "What should you do when driving in foggy conditions?",
+                options: ["A) Turn off your headlights", "B) Use high beam headlights", "C) Use low beam headlights and drive slowly", "D) Speed up to avoid staying in the fog"],
+                answer: "C"
+            },
+            {
+                question: "What is the meaning of a solid white line on the road?",
+                options: ["A) You can overtake other vehicles", "B) You must stop at the line", "C) Overtaking is prohibited, and lane changing is discouraged", "D) It is only a guideline, not a rule"],
+                answer: "C"
+            },
+            {
+                question: "What should you do if you’re involved in a minor accident with no injuries?",
+                options: ["A) Leave the scene immediately", "B) Call your insurance company", "C) Stop, exchange information, and report the incident to the authorities if required", "D) Start arguing with the other driver"],
+                answer: "C"
+            }
+            // Add more questions as needed
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function checkAnswer(selectedOption, correctAnswer) {
+            const options = selectedOption.parentElement.children;
+            for (let option of options) {
+                option.onclick = null;  // Disable clicking after selection
+            }
+            if (selectedOption.innerText.charAt(0) === correctAnswer) {
+                selectedOption.classList.add("correct");
+                score++;
+            } else {
+                selectedOption.classList.add("incorrect");
+            }
+            setTimeout(() => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            }, 1000); // Wait for 1 second before showing the next question
+        }
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            document.getElementById("question").innerText = currentQuestion.question;
+
+            const optionsList = document.getElementById("options");
+            optionsList.innerHTML = ""; // Clear previous options
+            currentQuestion.options.forEach(option => {
+                const li = document.createElement("li");
+                li.innerText = option;
+                li.onclick = function () {
+                    checkAnswer(this, currentQuestion.answer);
+                };
+                optionsList.appendChild(li);
+            });
+        }
+
+        function showResult() {
+            document.getElementById("quiz").classList.add("hidden");
+            const scoreElement = document.getElementById("score");
+            scoreElement.innerText = score + " / " + questions.length;
+            document.getElementById("result").classList.remove("hidden");
+        }
+
+        loadQuestion(); // Initialize the quiz
+    </script>
+</body>
+</html>
