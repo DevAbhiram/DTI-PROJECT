@@ -9,21 +9,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff6347, #808080);
-            color: #333;
+            background: linear-gradient(135deg, #ff6347, #808080); /* Gradient background */
+            color: #000; /* Black text for better visibility */
         }
 
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
         h1 {
-            color: #ff6347;
+            color: #ff6347; /* Darker orange for the heading */
         }
 
         p {
@@ -31,11 +32,26 @@
             line-height: 1.6;
         }
 
+        .step {
+            text-align: left; /* Align text to the left for better readability */
+            margin-top: 20px; /* Add space between steps */
+        }
+
+        .step h2 {
+            color: #ff6347; /* Darker orange for subheadings */
+        }
+
         .nav-links a {
             text-decoration: none;
-            color: #ff6347;
+            color: #ff6347; /* Darker orange for links */
             font-weight: bold;
             margin: 0 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #333; /* Dark gray for footer text */
         }
     </style>
 </head>
@@ -43,13 +59,48 @@
 
     <div class="container">
         <h1>Steps to Take After a Road Accident</h1>
-        <p>In the event of an accident, prioritize safety, call emergency services, document the incident, and follow legal guidelines to ensure proper action is taken.</p>
+        <p>In the event of an accident, it's crucial to remain calm and take the following steps to ensure safety and legal compliance:</p>
+
+        <div class="step">
+            <h2>1. Ensure Safety First</h2>
+            <p>Check for injuries and ensure your safety and that of others involved. If possible, move vehicles to a safe location away from traffic.</p>
+        </div>
+
+        <div class="step">
+            <h2>2. Call Emergency Services</h2>
+            <p>If there are injuries or significant damage, call emergency services immediately. Provide them with accurate information about the location and severity of the accident.</p>
+        </div>
+
+        <div class="step">
+            <h2>3. Document the Incident</h2>
+            <p>Take photos of the accident scene, vehicle damage, and any relevant road signs or signals. Collect contact information from witnesses and other drivers involved.</p>
+        </div>
+
+        <div class="step">
+            <h2>4. Exchange Information</h2>
+            <p>Exchange names, phone numbers, insurance details, and license plate numbers with the other party involved in the accident.</p>
+        </div>
+
+        <div class="step">
+            <h2>5. Avoid Admitting Fault</h2>
+            <p>Do not admit fault or make statements that could be interpreted as accepting blame at the scene of the accident. Leave this determination to the authorities and insurance companies.</p>
+        </div>
+
+        <div class="step">
+            <h2>6. Notify Your Insurance Company</h2>
+            <p>Report the accident to your insurance company as soon as possible. Provide them with all necessary documentation and details about the incident.</p>
+        </div>
 
         <div class="nav-links">
             <a href="guidelines-driving.html">Essential Guidelines for Safe Driving</a> |
             <a href="why-important.html">Why Road Safety Is Important?</a>
         </div>
+
     </div>
+
+    <footer>
+        &copy; 2024 Road Safety Awareness Initiative
+    </footer>
 
 </body>
 </html>
