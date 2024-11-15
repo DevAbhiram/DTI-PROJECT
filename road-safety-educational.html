@@ -5,22 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Road Safety Educational</title>
     <style>
+        /* Basic styles for body and container */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f2f2f2;
             color: #333;
+            overflow: auto; /* Allow scrolling */
+        }
+
+        /* Style for background video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Places video behind content */
+        }
+
+        .video-background video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            overflow-y: auto;
+            transition: left 0.3s ease;
+            padding-top: 20px;
+            z-index: 2; /* Above video background */
+        }
+
+        .sidebar.active {
+            left: 0; /* Show sidebar when active */
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        /* Button to open/close sidebar */
+        .open-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 3; /* Above sidebar */
+            color: #333;
+            background-color: #f2f2f2;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .container {
             max-width: 1000px;
             margin: 50px auto;
             text-align: center;
+            z-index: 1; /* Places content above the video */
+            position: relative;
+            color: #fff;
         }
 
         h1 {
-            color: #444;
+            color: #fff;
             font-size: 2em;
             margin-bottom: 20px;
         }
@@ -30,7 +97,7 @@
             width: 45%;
             padding: 20px;
             margin: 15px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8); /* Add transparency for readability */
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -48,13 +115,11 @@
         .block h2 {
             font-size: 1.5em;
             margin: 0;
-            color: #555;
         }
 
         .block p {
             font-size: 1em;
             line-height: 1.6;
-            color: #666;
         }
 
         /* Specific block colors */
@@ -67,6 +132,27 @@
 </head>
 <body>
 
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="roadsafetyeducationbgvideo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#why-important">Why Road Safety Is Important?</a>
+        <a href="#traffic-rules">Traffic Rules and Signals</a>
+        <a href="#Safe_Driving_Practices">Safe Driving Practices</a>
+        <a href="#guidelines-driving">Essential Guidelines for Safe Driving</a>
+        <a href="#after-accident">Steps to Take After a Road Accident</a>
+    </div>
+
+    <!-- Open Button for Sidebar -->
+    <button class="open-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+    <!-- Main Content -->
     <div class="container">
         <h1>Road Safety Educational</h1>
         <div class="block" id="why-important" onclick="location.href='why-important.html'">
@@ -94,6 +180,31 @@
             <p>Know the steps to take after an accident to ensure safety and proper documentation.</p>
         </div>
     </div>
+
+    <script>
+        // JavaScript function to toggle the sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // JavaScript code to enable swipe gestures for the sidebar
+        let startX;
+        let endX;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].screenX; // Start position
+        }, false);
+
+        document.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].screenX; // End position
+            if (startX > endX + 50) {  // Swipe left
+                document.getElementById('sidebar').classList.remove('active');
+            } else if (endX > startX + 50) {  // Swipe right
+                document.getElementById('sidebar').classList.add('active');
+            }
+        }, false);
+    </script>
 
 </body>
 </html>
