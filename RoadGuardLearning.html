@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .level {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .level h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #4CAF50;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .video-path {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px); /* 3 items per row on large screens */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-item a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #007BFF;
+            padding: 10px 15px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .video-item a:hover {
+            color: #fff;
+            background-color: #0056b3;
+        }
+
+        .status {
+            font-size: 1em;
+            color: #777;
+        }
+
+        .status.complete {
+            color: #28a745;
+        }
+
+        .status.not-started {
+            color: #dc3545;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1200px) {
+            .video-item {
+                width: calc(50% - 20px); /* 2 items per row on medium screens */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .video-item {
+                width: 100%; /* 1 item per row on small screens */
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .level h2 {
+                font-size: 1.5em;
+            }
+
+            .video-item {
+                padding: 15px;
+                font-size: 1em;
+            }
+        }
+
+        /* For Mobile Devices */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            .video-item {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            .video-item a {
+                font-size: 1em;
+            }
+
+            .level h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Road Safety Learning Hub</h1>
+        </header>
+
+        <!-- Beginner Level Section -->
+        <section class="level beginner">
+            <h2>Beginner Level</h2>
+            <div class="video-path">
+                <div class="video-item">
+                    <a href="/VIDEOS/Basic-Road-Safety-Rules.mp4">Basic Road Safety Rules</a>
+                    <span class="status complete">Complete</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Pedestrian-Safety.mp4">Pedestrian Safety</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Seatbelt-Usage.mp4">Seatbelt Usage</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/The-Dangers-of-Drunk-Driving.mp4">The Dangers of Drunk Driving</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Cycling-Safety.mp4">Cycling Safety</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Road-Signs-and-Markings.mp4">Road Signs and Markings</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermediate Level Section -->
+        <section class="level intermediate">
+            <h2>Intermediate Level</h2>
+            <div class="video-path">
+                <div class="video-item">
+                    <a href="/VIDEOS/Safe-Driving-Practices.mp4">Safe Driving Practices</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Night-Driving-Safety.mp4">Night Driving Safety</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Handling-Emergencies-on-the-Road.mp4">Handling Emergencies on the Road</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Motorcycle-Safety.mp4">Motorcycle Safety</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Bad-Weather-Driving.mp4">Bad Weather Driving</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Safe-Overtaking-and-Lane-Changes.mp4">Safe Overtaking and Lane Changes</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Level Section -->
+        <section class="level advanced">
+            <h2>Advanced Level</h2>
+            <div class="video-path">
+                <div class="video-item">
+                    <a href="/VIDEOS/Driving-in-Heavy-Traffic.mp4">Driving in Heavy Traffic</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Using-Technology-Safely.mp4">Using Technology Safely</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Road-Rage-Prevention.mp4">Road Rage Prevention</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/Environmental-Impact-of-Road-Safety.mp4">Environmental Impact of Road Safety</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="video-item">
+                    <a href="/VIDEOS/First-Aid-for-Road-Accidents.mp4">First Aid for Road Accidents</a>
+                    <span class="status not-started">Not Started</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
