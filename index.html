@@ -30,8 +30,6 @@
             background: linear-gradient(135deg, #00c6ff, #0072ff); color: white;
             text-align: center; position: relative; overflow: hidden;
             animation: slideIn 0.6s ease-in-out;
-           
-            
         }
         .hero h1 { font-size: 2.6rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 1.5rem; }
@@ -64,12 +62,13 @@
             background: rgba(255, 255, 255, 0.9);
             padding: 2rem; text-align: center;
             border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
             cursor: pointer;
         }
         .topic-card:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            background-color: #ffda79;
         }
 
         /* Footer */
@@ -114,7 +113,6 @@
 </div>
 
 <!-- Topics Section -->
-<!-- Topics Section -->
 <div class="topics" id="education">
     <h2 style="text-align: center; margin-bottom: 1.5rem; color: #333;">Our Road Safety Topics</h2>
     <button class="topic-card" onclick="window.location.href='road-safety-educational.html'">Road Safety Basics</button>
@@ -122,7 +120,6 @@
     <button class="topic-card" onclick="window.location.href='quiz.html'">Test Your Knowledge</button>
     <button class="topic-card" onclick="window.location.href='RoadSafetyStatistics.html'">Road Safety Statistics</button>
 </div>
-
 
 <!-- Footer -->
 <div class="footer" id="contact-us">
